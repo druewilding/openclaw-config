@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "72791d41-a36c-45b9-a0e7-5a41f6763dfa",
+      "agentId": "main",
+      "name": "Daily Menu Fetch",
+      "enabled": true,
+      "createdAtMs": 1770494131692,
+      "updatedAtMs": 1771271224421,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1-5"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Fetching the daily menu from Frokostfirmaet."
+      },
+      "state": {
+        "nextRunAtMs": 1771315200000,
+        "lastError": "empty-heartbeat-file",
+        "lastRunAtMs": 1771271224421,
+        "lastStatus": "skipped",
+        "lastDurationMs": 1
+      }
+    },
+    {
+      "id": "693d0fef-6573-4b55-a18a-c050219c69c3",
+      "agentId": "main",
+      "name": "auto-commit-openclaw-config",
+      "enabled": true,
+      "createdAtMs": 1771272363349,
+      "updatedAtMs": 1771272475925,
+      "schedule": {
+        "expr": "0 6 * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check ~/.openclaw and ~/.openclaw/workspace for changes and commit them if there are any meaningful changes (ignore node_modules, logs, credentials, etc). Use commit messages like \"Update: [files changed]\". Skip if nothing meaningful changed."
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1771304400000
+      }
+    }
+  ]
+}
