@@ -24,6 +24,36 @@
       "state": {
         "nextRunAtMs": 1771304400000
       }
+    },
+    {
+      "id": "9c12a3ff-c564-4b6f-bab2-b9a3892aeee6",
+      "agentId": "main",
+      "name": "Good Morning",
+      "enabled": true,
+      "createdAtMs": 1771275894871,
+      "updatedAtMs": 1771277297089,
+      "schedule": {
+        "expr": "0 7 * * *",
+        "kind": "cron",
+        "tz": "Europe/Copenhagen"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send a good morning DM. First, get the current weather in Copenhagen using the weather skill. Then search for: 1) Top tech/science news headlines (last 24 hours) 2) Important world politics news (last 24 hours). Format a friendly morning message with: 1) A greeting 2) Current weather temp and condition in Copenhagen 3) 2-3 top tech/science headlines 4) 2-3 important world politics headlines if anything significant is happening. Keep it concise but informative. Send via Discord DM to the user."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "340794043002912778"
+      },
+      "state": {
+        "nextRunAtMs": 1771308000000,
+        "lastRunAtMs": 1771276990458,
+        "lastStatus": "ok",
+        "lastDurationMs": 31707
+      }
     }
   ]
 }
