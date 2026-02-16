@@ -1,0 +1,27 @@
+# OpenClaw Git Ignore
+
+## Sensitive files
+.env
+credentials/
+identity/
+agents/main/agent/auth-profiles.json
+openclaw.json
+openclaw.json.bak*
+exec-approvals.json
+
+## Runtime data
+logs/
+memory/
+agents/main/sessions/
+completions/
+devices/
+subagents/
+cron/
+
+## Workspace (usually has its own repo)
+workspace/
+
+## System
+.gitignore
+update-check.json
+canvas/
