@@ -16,7 +16,6 @@ agents/main/sessions/
 completions/
 devices/
 subagents/
-cron/
 
 ## Workspace (usually has its own repo)
 workspace/
