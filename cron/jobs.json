@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771272475925,
+      "updatedAtMs": 1771304490162,
       "schedule": {
         "expr": "0 6 * * *",
         "kind": "cron"
@@ -22,7 +22,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1771304400000
+        "nextRunAtMs": 1771390800000,
+        "lastRunAtMs": 1771304400010,
+        "lastStatus": "ok",
+        "lastDurationMs": 90152,
+        "runningAtMs": 1771390800008
       }
     },
     {
@@ -31,7 +35,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1771277297089,
+      "updatedAtMs": 1771308192381,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -49,10 +53,11 @@
         "to": "340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771308000000,
-        "lastRunAtMs": 1771276990458,
-        "lastStatus": "ok",
-        "lastDurationMs": 31707
+        "nextRunAtMs": 1771394400000,
+        "lastRunAtMs": 1771308000012,
+        "lastStatus": "error",
+        "lastDurationMs": 192369,
+        "lastError": "Error: Ambiguous Discord recipient \"340794043002912778\". Use \"user:340794043002912778\" for DMs or \"channel:340794043002912778\" for channel messages."
       }
     }
   ]
