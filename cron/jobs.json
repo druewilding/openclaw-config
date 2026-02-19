@@ -64,7 +64,7 @@
       "name": "Every weekday at 9am, do the following:",
       "enabled": true,
       "createdAtMs": 1771435565683,
-      "updatedAtMs": 1771489332142,
+      "updatedAtMs": 1771495316053,
       "schedule": {
         "expr": "0 9 * * 1-5",
         "kind": "cron",
@@ -74,7 +74,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Every weekday at 9am, do the following:\n\n1. Use the browser tool (profile: \"openclaw\") to open https://frokostfirmaet.dk/rizraz/\n2. Wait for the page to load, then take a snapshot\n3. Figure out today's day of week (in Copenhagen time): Monday=0 clicks, Tuesday=0 clicks (already shows Mon+Tue), Wednesday=1 click, Thursday=2 clicks, Friday=3 clicks (shows Wed+Thu first click, then Thu+Fri on second)\n4. Click the carousel forward the appropriate number of times using: `document.querySelector('img.arrow[data-tiny-next]').click()` - wait a moment between clicks\n5. Take a snapshot and extract the menu for today's day\n6. Translate from Danish to English\n7. Simplify: only include Main Dish, Vegetarian option, and the two salads (skip bread, toppings, cake)\n8. Format exactly as (wrap in triple backticks):\n```\n**Main Dish:** [English]\n**Vegetarian:** [English]\n---\n**Hearty Salad:** [English]\n**Light Salad:** [English]\n```\n9. Send as a private Discord DM to user Drue (ID: 340794043002912778)\n10. Close the browser when done\n\nToday's date context: {{context.date}}",
+        "message": "Every weekday at 9am, do the following:\n\n1. Use the browser tool (profile: \"openclaw\") to open https://frokostfirmaet.dk/rizraz/\n2. Wait for the page to load, then take a snapshot\n3. Figure out today's day of week (in Copenhagen time): Monday=0 clicks, Tuesday=0 clicks (already shows Mon+Tue), Wednesday=1 click, Thursday=2 clicks, Friday=3 clicks (shows Wed+Thu first click, then Thu+Fri on second)\n4. Click the carousel forward the appropriate number of times using: `document.querySelector('img.arrow[data-tiny-next]').click()` - wait a moment between clicks\n5. Take a snapshot and extract the menu for today's day\n6. Translate from Danish to English\n7. Simplify: only include Main Dish, Vegetarian option, and the two salads (skip bread, toppings, cake)\n8. Format exactly as (wrap in triple backticks with emoji):\n```\n🍽️ **Main Dish:** [English]\n🌱 **Vegetarian:** [English]\n---\n🥗 **Hearty Salad:** [English]\n🥬 **Light Salad:** [English]\n```\n9. Send as a private Discord DM to user Drue (ID: 340794043002912778)\n10. Close the browser when done\n\nToday's date context: {{context.date}}",
         "model": "ollama/minimax-m2.5:cloud",
         "thinking": "off"
       },
@@ -85,9 +85,9 @@
       },
       "state": {
         "nextRunAtMs": 1771574400000,
-        "lastRunAtMs": 1771488000011,
+        "lastRunAtMs": 1771489424049,
         "lastStatus": "ok",
-        "lastDurationMs": 128149
+        "lastDurationMs": 264827
       }
     }
   ]
