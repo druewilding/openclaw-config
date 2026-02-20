@@ -118,6 +118,10 @@
           "maxTokens": 16384
         }
       ]
+    },
+    "github-copilot": {
+      "baseUrl": "https://api.individual.githubcopilot.com",
+      "models": []
     }
   }
 }
