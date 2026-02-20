@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771622768531,
+      "updatedAtMs": 1771623112904,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -23,9 +23,9 @@
       },
       "state": {
         "nextRunAtMs": 1771704000000,
-        "lastRunAtMs": 1771617600009,
+        "lastRunAtMs": 1771623112904,
         "lastStatus": "ok",
-        "lastDurationMs": 74380
+        "lastDurationMs": 57234
       }
     },
     {
