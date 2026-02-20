@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771623369060,
+      "updatedAtMs": 1771623569171,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -16,7 +16,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Every evening at 9pm, do the following:\n\n1. FIRST: Restart the gateway to ensure latest config is loaded (gateway action=restart)\n2. Wait a moment for gateway to come back up\n3. Check if there's anything important from today that needs to be saved to memory files (memory/YYYY-MM-DD.md or MEMORY.md)\n4. If there are meaningful events, decisions, or things to remember from today, write them to the daily memory file (e.g., memory/2026-02-20.md)\n5. Also update MEMORY.md if there are any long-term memories worth preserving\n6. Then check ~/.openclaw and ~/.openclaw/workspace for changes and commit them if there are any meaningful changes (ignore node_modules, logs, credentials, etc)\n7. Use commit messages like \"Update: [files changed]\"\n8. Push to GitHub if there are meaningful changes\n9. Skip everything if nothing meaningful happened\n\nToday's date context: {{context.date}}"
+        "message": "Every evening at 9pm, do the following:\n\n1. Check if there's anything important from today that needs to be saved to memory files (memory/YYYY-MM-DD.md or MEMORY.md)\n2. If there are meaningful events, decisions, or things to remember from today, write them to the daily memory file (e.g., memory/2026-02-20.md)\n3. Also update MEMORY.md if there are any long-term memories worth preserving\n4. Then check ~/.openclaw and ~/.openclaw/workspace for changes and commit them if there are any meaningful changes (ignore node_modules, logs, credentials, etc)\n5. Use commit messages like \"Update: [files changed]\"\n6. Push to GitHub if there are meaningful changes\n7. Skip everything if nothing meaningful happened\n\nToday's date context: {{context.date}}"
       },
       "delivery": {
         "mode": "none"
