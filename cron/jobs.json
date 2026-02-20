@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771525776305,
+      "updatedAtMs": 1771531262037,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -22,10 +22,10 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1771531200000,
-        "lastRunAtMs": 1771444800013,
+        "nextRunAtMs": 1771617600000,
+        "lastRunAtMs": 1771531200010,
         "lastStatus": "ok",
-        "lastDurationMs": 19213
+        "lastDurationMs": 62027
       }
     },
     {
@@ -34,7 +34,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1771481232173,
+      "updatedAtMs": 1771567369819,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -52,10 +52,10 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771567200000,
-        "lastRunAtMs": 1771480800011,
+        "nextRunAtMs": 1771653600000,
+        "lastRunAtMs": 1771567200009,
         "lastStatus": "ok",
-        "lastDurationMs": 106112
+        "lastDurationMs": 169810
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "Every weekday at 9am, do the following:",
       "enabled": true,
       "createdAtMs": 1771435565683,
-      "updatedAtMs": 1771495316053,
+      "updatedAtMs": 1771574549319,
       "schedule": {
         "expr": "0 9 * * 1-5",
         "kind": "cron",
@@ -84,10 +84,39 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771574400000,
-        "lastRunAtMs": 1771489424049,
+        "nextRunAtMs": 1771833600000,
+        "lastRunAtMs": 1771574400011,
         "lastStatus": "ok",
-        "lastDurationMs": 264827
+        "lastDurationMs": 149308
+      }
+    },
+    {
+      "id": "3275e3a3-4a6c-493e-aced-6fcf3404733a",
+      "agentId": "main",
+      "name": "Check Scalingo CLI releases",
+      "enabled": true,
+      "createdAtMs": 1771581245500,
+      "updatedAtMs": 1771581245500,
+      "schedule": {
+        "everyMs": 86400000,
+        "kind": "every",
+        "anchorMs": 1771581245500
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check https://github.com/Scalingo/cli/releases for the latest release version. Compare with the last known version stored in ~/.scalingo_cli_version (create the file with content \"v1.43.3\" if it doesn't exist). If there's a NEW version (different from last known), reply with: \"🚀 New Scalingo CLI release: [version] - [release date if available]\". If no new release, reply with just \"NO_REPLY\".",
+        "model": "fast",
+        "timeoutSeconds": 30
+      },
+      "delivery": {
+        "channel": "discord",
+        "mode": "announce",
+        "to": "733996560588996700"
+      },
+      "state": {
+        "nextRunAtMs": 1771667645500
       }
     }
   ]
