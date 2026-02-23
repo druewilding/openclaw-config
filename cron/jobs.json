@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771623569171,
+      "updatedAtMs": 1771790966645,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -22,10 +22,12 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1771704000000,
-        "lastRunAtMs": 1771623369060,
+        "nextRunAtMs": 1771876800000,
+        "lastRunAtMs": 1771790668063,
         "lastStatus": "ok",
-        "lastDurationMs": 35892
+        "lastDurationMs": 298582,
+        "consecutiveErrors": 0,
+        "runningAtMs": 1771876800009
       }
     },
     {
@@ -34,7 +36,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1771567369819,
+      "updatedAtMs": 1771827733415,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -52,10 +54,12 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771653600000,
-        "lastRunAtMs": 1771567200009,
-        "lastStatus": "ok",
-        "lastDurationMs": 169810
+        "nextRunAtMs": 1771912800000,
+        "lastRunAtMs": 1771826787911,
+        "lastStatus": "error",
+        "lastDurationMs": 945504,
+        "consecutiveErrors": 1,
+        "lastError": "cron announce delivery failed"
       }
     },
     {
@@ -64,7 +68,7 @@
       "name": "Every weekday at 9am, do the following:",
       "enabled": true,
       "createdAtMs": 1771435565683,
-      "updatedAtMs": 1771574549319,
+      "updatedAtMs": 1771834668391,
       "schedule": {
         "expr": "0 9 * * 1-5",
         "kind": "cron",
@@ -84,10 +88,12 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771833600000,
-        "lastRunAtMs": 1771574400011,
-        "lastStatus": "ok",
-        "lastDurationMs": 149308
+        "nextRunAtMs": 1771920000000,
+        "lastRunAtMs": 1771833646810,
+        "lastStatus": "error",
+        "lastDurationMs": 1021581,
+        "lastError": "Error: cron: job execution timed out",
+        "consecutiveErrors": 1
       }
     },
     {
@@ -96,7 +102,7 @@
       "name": "Check Scalingo CLI releases",
       "enabled": true,
       "createdAtMs": 1771581245500,
-      "updatedAtMs": 1771581245500,
+      "updatedAtMs": 1771874879947,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -108,7 +114,7 @@
         "kind": "agentTurn",
         "message": "Check https://github.com/Scalingo/cli/releases for the latest release version. Compare with the last known version stored in ~/.scalingo_cli_version (create the file with content \"v1.43.3\" if it doesn't exist). If there's a NEW version (different from last known), reply with: \"🚀 New Scalingo CLI release: [version] - [release date if available]\". If no new release, reply with just \"NO_REPLY\".",
         "model": "fast",
-        "timeoutSeconds": 30
+        "timeoutSeconds": 60
       },
       "delivery": {
         "channel": "discord",
@@ -116,7 +122,12 @@
         "to": "733996560588996700"
       },
       "state": {
-        "nextRunAtMs": 1771667645500
+        "nextRunAtMs": 1771926845500,
+        "lastRunAtMs": 1771840966333,
+        "lastStatus": "error",
+        "lastDurationMs": 30006,
+        "consecutiveErrors": 0,
+        "lastError": "Error: cron: job execution timed out"
       }
     }
   ]
