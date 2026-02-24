@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771790966645,
+      "updatedAtMs": 1771876917394,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -22,12 +22,12 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1771876800000,
-        "lastRunAtMs": 1771790668063,
+        "nextRunAtMs": 1771963200000,
+        "lastRunAtMs": 1771876800011,
         "lastStatus": "ok",
-        "lastDurationMs": 298582,
+        "lastDurationMs": 117383,
         "consecutiveErrors": 0,
-        "runningAtMs": 1771876800009
+        "runningAtMs": 1771963200009
       }
     },
     {
@@ -36,7 +36,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1771827733415,
+      "updatedAtMs": 1771912856596,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -54,11 +54,11 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771912800000,
-        "lastRunAtMs": 1771826787911,
+        "nextRunAtMs": 1771999200000,
+        "lastRunAtMs": 1771912800011,
         "lastStatus": "error",
-        "lastDurationMs": 945504,
-        "consecutiveErrors": 1,
+        "lastDurationMs": 56585,
+        "consecutiveErrors": 2,
         "lastError": "cron announce delivery failed"
       }
     },
@@ -88,11 +88,10 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1771920000000,
+        "nextRunAtMs": 1772006400000,
         "lastRunAtMs": 1771833646810,
         "lastStatus": "error",
         "lastDurationMs": 1021581,
-        "lastError": "Error: cron: job execution timed out",
         "consecutiveErrors": 1
       }
     },
@@ -102,7 +101,7 @@
       "name": "Check Scalingo CLI releases",
       "enabled": true,
       "createdAtMs": 1771581245500,
-      "updatedAtMs": 1771874879947,
+      "updatedAtMs": 1771926933329,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -114,7 +113,7 @@
         "kind": "agentTurn",
         "message": "Check https://github.com/Scalingo/cli/releases for the latest release version. Compare with the last known version stored in ~/.scalingo_cli_version (create the file with content \"v1.43.3\" if it doesn't exist). If there's a NEW version (different from last known), reply with: \"🚀 New Scalingo CLI release: [version] - [release date if available]\". If no new release, reply with just \"NO_REPLY\".",
         "model": "fast",
-        "timeoutSeconds": 60
+        "timeoutSeconds": 120
       },
       "delivery": {
         "channel": "discord",
@@ -122,11 +121,11 @@
         "to": "733996560588996700"
       },
       "state": {
-        "nextRunAtMs": 1771926845500,
-        "lastRunAtMs": 1771840966333,
+        "nextRunAtMs": 1772013245500,
+        "lastRunAtMs": 1771926845509,
         "lastStatus": "error",
-        "lastDurationMs": 30006,
-        "consecutiveErrors": 0,
+        "lastDurationMs": 60013,
+        "consecutiveErrors": 1,
         "lastError": "Error: cron: job execution timed out"
       }
     }
