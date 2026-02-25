@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1771963270544,
+      "updatedAtMs": 1772030169977,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -16,7 +16,8 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Every evening at 9pm, do the following:\n\n1. Check if there's anything important from today that needs to be saved to memory files (memory/YYYY-MM-DD.md or MEMORY.md)\n2. If there are meaningful events, decisions, or things to remember from today, write them to the daily memory file (e.g., memory/2026-02-20.md)\n3. Also update MEMORY.md if there are any long-term memories worth preserving\n4. Then check ~/.openclaw and ~/.openclaw/workspace for changes and commit them if there are any meaningful changes (ignore node_modules, logs, credentials, etc)\n5. Use commit messages like \"Update: [files changed]\"\n6. Push to GitHub if there are meaningful changes\n7. Skip everything if nothing meaningful happened\n\nToday's date context: {{context.date}}"
+        "message": "Every evening at 9pm, do the following:\n\n1. Check if there's anything important from today that needs to be saved to memory files (memory/YYYY-MM-DD.md or MEMORY.md)\n2. If there are meaningful events, decisions, or things to remember from today, write them to the daily memory file (e.g., memory/2026-02-20.md)\n3. Also update MEMORY.md if there are any long-term memories worth preserving\n4. Then check ~/.openclaw and ~/.openclaw/workspace for changes and commit them if there are any meaningful changes (ignore node_modules, logs, credentials, etc)\n5. Use commit messages like \"Update: [files changed]\"\n6. Push to GitHub if there are meaningful changes\n7. Skip everything if nothing meaningful happened\n\nToday's date context: {{context.date}}",
+        "model": "ollama/minimax-m2.5:cloud"
       },
       "delivery": {
         "mode": "none"
@@ -35,7 +36,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1771999325964,
+      "updatedAtMs": 1772030179070,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -45,7 +46,8 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Send a good morning DM. First, get the current weather in Copenhagen using the weather skill. Then search for: 1) Top tech/science news headlines (last 24 hours) 2) Important world politics news (last 24 hours). Format a friendly morning message with: 1) A greeting 2) Current weather temp and condition in Copenhagen 3) 2-3 top tech/science headlines 4) 2-3 important world politics headlines if anything significant is happening. Keep it concise but informative. Send via Discord DM to the user."
+        "message": "Send a good morning DM. First, get the current weather in Copenhagen using the weather skill. Then search for: 1) Top tech/science news headlines (last 24 hours) 2) Important world politics news (last 24 hours). Format a friendly morning message with: 1) A greeting 2) Current weather temp and condition in Copenhagen 3) 2-3 top tech/science headlines 4) 2-3 important world politics headlines if anything significant is happening. Keep it concise but informative. Send via Discord DM to the user.",
+        "model": "ollama/minimax-m2.5:cloud"
       },
       "delivery": {
         "mode": "announce",
@@ -57,7 +59,7 @@
         "lastRunAtMs": 1771999200013,
         "lastStatus": "error",
         "lastDurationMs": 125951,
-        "consecutiveErrors": 3,
+        "consecutiveErrors": 0,
         "lastError": "cron announce delivery failed"
       }
     },
@@ -95,37 +97,37 @@
       }
     },
     {
-      "id": "3275e3a3-4a6c-493e-aced-6fcf3404733a",
+      "id": "a079a865-d4af-4efd-bfaa-6b1ae5f0978a",
       "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1469385515064102983",
       "name": "Check Scalingo CLI releases",
       "enabled": true,
-      "createdAtMs": 1771581245500,
-      "updatedAtMs": 1771926933329,
+      "createdAtMs": 1772020745972,
+      "updatedAtMs": 1772020766578,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
-        "anchorMs": 1771581245500
+        "anchorMs": 1772020745972
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Check https://github.com/Scalingo/cli/releases for the latest release version. Compare with the last known version stored in ~/.scalingo_cli_version (create the file with content \"v1.43.3\" if it doesn't exist). If there's a NEW version (different from last known), reply with: \"🚀 New Scalingo CLI release: [version] - [release date if available]\". If no new release, reply with just \"NO_REPLY\".",
-        "model": "fast",
-        "timeoutSeconds": 120
+        "message": "Fetch https://github.com/Scalingo/cli/releases.atom and extract the version from the first <title> tag. Read ~/.scalingo_cli_version (create with \"v1.43.3\" if missing). If different, reply: \"🚀 New Scalingo CLI release: vX.XX.X\". Else reply NO_REPLY.",
+        "model": "ollama/minimax-m2.5:cloud",
+        "timeoutSeconds": 30
       },
       "delivery": {
         "channel": "discord",
         "mode": "announce",
-        "to": "733996560588996700"
+        "to": "user:733996560588996700"
       },
       "state": {
-        "nextRunAtMs": 1772013245500,
-        "lastRunAtMs": 1771926845509,
-        "lastStatus": "error",
-        "lastDurationMs": 60013,
-        "consecutiveErrors": 1,
-        "lastError": "Error: cron: job execution timed out"
+        "nextRunAtMs": 1772107145972,
+        "lastRunAtMs": 1772020757032,
+        "lastStatus": "ok",
+        "lastDurationMs": 9546,
+        "consecutiveErrors": 0
       }
     }
   ]
