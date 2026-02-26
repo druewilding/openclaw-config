@@ -7,7 +7,7 @@
       "name": "auto-commit-openclaw-config",
       "enabled": true,
       "createdAtMs": 1771272363349,
-      "updatedAtMs": 1772030169977,
+      "updatedAtMs": 1772049746182,
       "schedule": {
         "expr": "0 21 * * *",
         "kind": "cron"
@@ -23,11 +23,12 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1772049600000,
-        "lastRunAtMs": 1771963200012,
+        "nextRunAtMs": 1772136000000,
+        "lastRunAtMs": 1772049600013,
         "lastStatus": "ok",
-        "lastDurationMs": 70532,
-        "consecutiveErrors": 0
+        "lastDurationMs": 146169,
+        "consecutiveErrors": 0,
+        "runningAtMs": 1772136000008
       }
     },
     {
@@ -36,7 +37,7 @@
       "name": "Good Morning",
       "enabled": true,
       "createdAtMs": 1771275894871,
-      "updatedAtMs": 1772030179070,
+      "updatedAtMs": 1772085695618,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -55,11 +56,11 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1772085600000,
-        "lastRunAtMs": 1771999200013,
+        "nextRunAtMs": 1772172000000,
+        "lastRunAtMs": 1772085600013,
         "lastStatus": "error",
-        "lastDurationMs": 125951,
-        "consecutiveErrors": 0,
+        "lastDurationMs": 95605,
+        "consecutiveErrors": 1,
         "lastError": "cron announce delivery failed"
       }
     },
@@ -89,7 +90,7 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1772092800000,
+        "nextRunAtMs": 1772179200000,
         "lastRunAtMs": 1772006572987,
         "lastStatus": "ok",
         "lastDurationMs": 45518,
@@ -103,7 +104,7 @@
       "name": "Check Scalingo CLI releases",
       "enabled": true,
       "createdAtMs": 1772020745972,
-      "updatedAtMs": 1772020766578,
+      "updatedAtMs": 1772107157042,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -123,10 +124,10 @@
         "to": "user:733996560588996700"
       },
       "state": {
-        "nextRunAtMs": 1772107145972,
-        "lastRunAtMs": 1772020757032,
+        "nextRunAtMs": 1772193545972,
+        "lastRunAtMs": 1772107145981,
         "lastStatus": "ok",
-        "lastDurationMs": 9546,
+        "lastDurationMs": 11061,
         "consecutiveErrors": 0
       }
     }
