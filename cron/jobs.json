@@ -69,7 +69,7 @@
       "name": "Every weekday at 9am, do the following:",
       "enabled": true,
       "createdAtMs": 1771435565683,
-      "updatedAtMs": 1773042973302,
+      "updatedAtMs": 1773048110788,
       "schedule": {
         "expr": "0 9 * * 1-5",
         "kind": "cron",
@@ -79,7 +79,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Every weekday at 9am, do the following:\n\n1. Use the browser tool (profile: \"openclaw\") to open https://www.madklubben.dk/en/lunch/506-by-madklubben?menuIndex=4&overlay=menu\n2. Wait for the page to load, then take a snapshot\n3. Find and extract the \"Today's dish\" section:\n   - Main dish (meat): the meat option listed under \"Meat:\"\n   - Main dish (veggie): the veggie option listed under \"Veggie:\"\n4. Find and extract the two salads:\n   - Hearty Salad: the salad under \"Side dishes\"\n   - Light Salad: the salad under \"Classic cucumber salad\" (or similar light salad)\n5. Format exactly as (wrap in triple backticks with emoji):\n```\n🍽️ **Main Dish (meat):** [meat dish from page]\n🌱 **Main Dish (veggie):** [veggie dish from page]\n---\n🥗 **Hearty Salad:** [hearty salad from page]\n🥬 **Light Salad:** [light salad from page]\n```\n6. Send as a private Discord DM to user ID 340794043002912778\n7. Close the browser when done\n\nToday's date context: {{context.date}}",
+        "message": "Every weekday at 9am, do the following:\n\n1. Determine the current week number (e.g., week 11 for early March 2026)\n2. Use the browser tool (profile: \"openclaw\") to open the PDF menu URL: https://media.uheadless.com/aciiffac23/media/cmjpqpmp/menu-week-[WEEK]-english.pdf (replace [WEEK] with current week number)\n3. Take a screenshot of the PDF\n4. Use the image tool to analyze the screenshot and extract:\n   - Main dish (meat): the meat option for the current day\n   - Main dish (veggie): the vegetarian option for the current day\n   - Hearty Salad: the first salad listed\n   - Light Salad: the second salad listed\n5. Translate any Danish terms to English if needed\n6. Format exactly as (wrap in triple backticks with emoji):\n```\n🍽️ **Main Dish (meat):** [meat dish]\n🌱 **Main Dish (veggie):** [veggie dish]\n---\n🥗 **Hearty Salad:** [salad 1]\n🥬 **Light Salad:** [salad 2]\n```\n7. Send as a private Discord DM to user ID 340794043002912778\n8. Close the browser when done\n\nToday's date context: {{context.date}}",
         "model": "ollama/minimax-m2.5:cloud",
         "thinking": "off"
       },
@@ -89,10 +89,10 @@
         "to": "user:340794043002912778"
       },
       "state": {
-        "nextRunAtMs": 1773043200000,
-        "lastRunAtMs": 1772658853711,
+        "nextRunAtMs": 1773129600000,
+        "lastRunAtMs": 1773043200011,
         "lastStatus": "ok",
-        "lastDurationMs": 52080,
+        "lastDurationMs": 155312,
         "consecutiveErrors": 0
       }
     },
